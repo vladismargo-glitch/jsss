@@ -12,11 +12,11 @@ let app = new Vue({
         product: "Socks",
         image: "./assets/vmSocks-blue-onWhite.jpg",
         altText: "A pair of socks",
-        inStock: true,
+        inStock: false,
         description: "A pair of warm, fuzzy socks.",
         productclasq: "More products like this.",
         link: "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=socks",
-        inventory: 100,
+        inventory: 0,
         onSale: false,
         updateProduct(variantImage) {
             this.image = variantImage
