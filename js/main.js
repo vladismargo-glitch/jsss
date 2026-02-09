@@ -3,7 +3,14 @@ Vue.component('product-tabs', {
     props: {
         reviews: {
             type: Array,
-            required: false
+            required: true
+        },
+        shipping: {
+            required: true
+        },
+        details: {
+            type: Array,
+            required: true
         }
     },
     template: `
@@ -193,7 +200,11 @@ Vue.component('product', {
                 </ul>
             </div>
 
-            <product-tabs :reviews="reviews" @review-submitted="addReview"></product-tabs>
+            <product-tabs 
+            :reviews="reviews" 
+            :shipping="shipping" 
+            :details="details">
+            </product-tabs>
         </div>
     </div>
     `,
